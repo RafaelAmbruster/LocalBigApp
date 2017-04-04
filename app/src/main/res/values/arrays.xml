@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="filter_category">
+        <item>Automotive Businesses</item>
+        <item>Business Support &amp; Supplies</item>
+        <item>Computers &amp; Electronics</item>
+        <item>Construction &amp; Contractors</item>
+        <item>Education</item>
+        <item>Entertainment</item>
+        <item>Food &amp; Dining</item>
+        <item>Health &amp; Medicine</item>
+        <item>Home &amp; Garden</item>
+        <item>Legal &amp; Financial</item>
+        <item>Manufacturing, Wholesale, Distribution</item>
+        <item>Merchants</item>
+        <item>Miscellaneous</item>
+        <item>Personal Care &amp; Services</item>
+        <item>Real Estate</item>
+        <item>Travel &amp; Transportation</item>
+    </string-array>
+
+    <array name="progress_colors">
+        <item>#FF3F8AF8</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="in_colors">
+        <item>#FFB5D4FF</item>
+        <item>#FFDEEAFC</item>
+        <item>#FFFAFFFE</item>
+    </array>
+
+    <string-array name="criteria">
+        <item>Distance</item>
+        <item>Discount</item>
+    </string-array>
+
+    <string-array name="filter">
+        <item>Business Category</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>$100-$200</item>
+        <item>$200-$300</item>
+        <item>$400-$500</item>
+        <item>$600-$700</item>
+        <item>$800-$900</item>
+        <item>$1000-$1100</item>
+        <item>$1200-$1300</item>
+    </string-array>
+
+    <string-array name="cities">
+        <item>New York</item>
+        <item>California</item>
+        <item>Last Vegas</item>
+        <item>Chicago</item>
+        <item>Los Angles</item>
+        <item>Texas</item>
+        <item>London</item>
+        <item>Paris</item>
+    </string-array>
+
+</resources>

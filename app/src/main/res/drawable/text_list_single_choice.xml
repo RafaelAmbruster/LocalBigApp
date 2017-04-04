@@ -1,0 +1,13 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_mediumAnimTime">
+    <item android:state_activated="true">
+        <layer-list>
+
+            <item android:right="@dimen/padding_large">
+                <bitmap android:gravity="right" android:src="@drawable/ic_check_black" />
+            </item>
+
+        </layer-list>
+
+
+    </item>
+</selector>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/filter_default_checkable_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <CheckBox
+        android:id="@+id/defaultMultipleItemCheckBox"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/filter_default_material_list_selector"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_large"
+        android:textSize="@dimen/txt_size_small" />
+
+</LinearLayout>

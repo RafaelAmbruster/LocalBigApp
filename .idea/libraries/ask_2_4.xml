@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ask-2.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.vistrav/ask/2.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.vistrav/ask/2.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vistrav/ask/2.4/239c0ed25af20b49d2f03bce4ffc8621ab948728/ask-2.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

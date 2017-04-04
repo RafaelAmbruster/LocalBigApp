@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/app_bar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/appBarLayout"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="@dimen/spacing_medium"
+                    app:cardElevation="@dimen/spacing_xsmall"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="7dp">
+
+                            <TextView
+                                android:id="@+id/coupon_information"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="@string/coupon_information"
+                                android:textColor="@color/primary_dark_material_light"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="#ccc"
+                            android:weightSum="1"></RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="32dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/coupon_active"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="top"
+                                android:layout_toStartOf="@+id/is_active"
+                                android:gravity="center|right"
+                                android:padding="2dp"
+                                android:text="@string/coupon_active"
+                                android:textSize="14sp" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/is_active"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:checked="true"
+                                android:gravity="center" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/coupon_start_date_desc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="@string/pick_start_date_time_coupon"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <com.balysv.materialripple.MaterialRippleLayout
+                                        style="@style/RippleStyleBlack"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:id="@+id/pick_start_date"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="fill_parent"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_dayofweek"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                android:textColor="@color/material_grey_600"
+                                                android:textSize="14sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_day"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textAppearance="?android:textAppearanceSmall"
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_monthandyear"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                android:textColor="@color/material_grey_600"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="fill_parent"
+                                        android:layout_marginBottom="5.0dip"
+                                        android:layout_marginLeft="20.0dip"
+                                        android:layout_marginRight="20.0dip"
+                                        android:layout_marginTop="5.0dip"
+                                        android:background="#ccc" />
+
+                                    <com.balysv.materialripple.MaterialRippleLayout
+                                        style="@style/RippleStyleBlack"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:id="@+id/pick_start_time"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="fill_parent"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_hour"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=":"
+                                                android:textColor="@color/material_blue_grey_700" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_minute"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_ampm"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="3.0dip"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="12.0sp" />
+                                        </LinearLayout>
+
+                                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/date_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/coupon_start_date_desc_end"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="top"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="@string/pick_end_date_time_coupon"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <com.balysv.materialripple.MaterialRippleLayout
+                                        style="@style/RippleStyleBlack"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:id="@+id/pick_end_date"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="fill_parent"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_dayofweek_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                android:textColor="@color/material_grey_600"
+                                                android:textSize="14sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_day_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textAppearance="?android:textAppearanceSmall"
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_monthandyear_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                                                android:textColor="@color/material_grey_600"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="fill_parent"
+                                        android:layout_marginBottom="5.0dip"
+                                        android:layout_marginLeft="20.0dip"
+                                        android:layout_marginRight="20.0dip"
+                                        android:layout_marginTop="5.0dip"
+                                        android:background="#ccc" />
+
+                                    <com.balysv.materialripple.MaterialRippleLayout
+                                        style="@style/RippleStyleBlack"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_weight="0.5"
+                                        android:gravity="center">
+
+                                        <LinearLayout
+                                            android:id="@+id/pick_end_time"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="fill_parent"
+                                            android:gravity="center">
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_hour_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=":"
+                                                android:textColor="@color/material_blue_grey_700" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_minute_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="25.0sp" />
+
+                                            <TextView
+                                                android:id="@+id/widget_details_header_ampm_end"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:paddingLeft="3.0dip"
+                                                android:text=""
+                                                android:textColor="@color/material_blue_grey_700"
+                                                android:textSize="12.0sp" />
+                                        </LinearLayout>
+
+                                    </com.balysv.materialripple.MaterialRippleLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="@dimen/spacing_medium"
+                    app:cardElevation="@dimen/spacing_xsmall"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="7dp">
+
+                            <TextView
+                                android:id="@+id/coupon_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="@string/coupon_description"
+                                android:textColor="@color/primary_dark_material_light"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="#ccc"
+                            android:weightSum="1"></RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:orientation="vertical">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/discountWrapper"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp">
+
+                                <EditText
+                                    android:id="@+id/discount"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginRight="4dp"
+                                    android:background="@android:color/transparent"
+                                    android:hint="@string/discount"
+                                    android:inputType="numberDecimal"
+                                    android:maxLength="10"
+                                    android:text=""
+                                    android:textColorHint="@color/colorAccent"
+                                    android:textSize="16sp" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="right">
+
+                                <TextView
+                                    android:id="@+id/coupon_percent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|right"
+                                    android:padding="2dp"
+                                    android:text="@string/coupon_inpercent"
+                                    android:textSize="14sp" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:id="@+id/is_inpercent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:gravity="center" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:id="@+id/descriptionWrapper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="2dp">
+
+                            <EditText
+                                android:id="@+id/description"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:background="@android:color/transparent"
+                                android:hint="Description"
+                                android:inputType="textMultiLine"
+                                android:maxLength="250"
+                                android:textColorHint="@color/colorAccent"
+                                android:textSize="16sp" />
+                        </android.support.design.widget.TextInputLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="@dimen/spacing_medium"
+                    app:cardElevation="@dimen/spacing_xsmall"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:paddingBottom="7dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingTop="7dp">
+
+                            <TextView
+                                android:id="@+id/coupon_picture"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_gravity="top"
+                                android:gravity="center"
+                                android:padding="2dp"
+                                android:text="@string/coupon_picture"
+                                android:textColor="@color/primary_dark_material_light"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="#ccc"
+                            android:weightSum="1"></RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.app.localbig.view.image.Patio
+                                android:id="@+id/patio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:actionsTextColor="#333"
+                                app:maxPictures="1"
+                                app:thumbnailHeight="200dp"
+                                app:thumbnailWidth="200dp"
+                                app:thumbnailsContainerBackground="#ddd"
+                                app:thumbnailsContainerPadding="10dp"
+                                app:thumbnailsMessage="@string/patio_footer" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

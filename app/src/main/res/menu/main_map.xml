@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_business"
+        android:icon="@drawable/ic_action_menu_business"
+        android:title="BUSINESS"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/action_events"
+        android:icon="@drawable/ic_action_menu_event"
+        android:title="EVENTS"
+        app:showAsAction="always|withText" />
+
+</menu>
